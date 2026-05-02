@@ -2,68 +2,63 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Particles from "../ui/Particles";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden bg-black">
       {/* Background */}
       <Image
-        src="/images/hero-bg.png"
+        src="/images/hero.gbg.png"
         alt="Hécate Editora"
         fill
         priority
         className="object-cover object-center"
       />
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/55" />
+      
 
       {/* Content */}
       <div className="relative z-10 flex min-h-screen items-center justify-center px-6">
         <div className="text-center">
           {/* Main Logo */}
         <h1
-  className="
-    relative
-    text-[7rem]
-    md:text-[8rem]
-    lg:text-[11rem]
-    uppercase
-    tracking-[0.14em]
-    leading-none
-    text-transparent
-    bg-clip-text
-    select-none
-  "
-  style={{
-    fontFamily: "Norse",
-    backgroundImage: `
-      linear-gradient(
-        180deg,
-        #FFFDF0 0%,
-        #FFF4C9 10%,
-        #FFE79A 22%,
-        #F4D77A 35%,
-        #D4AF37 52%,
-        #E7C45A 62%,
-        #A87416 82%,
-        #7B4F00 100%
-      )
-    `,
-    backgroundSize: "200% auto",
-    animation: "goldShine 4s linear infinite",
-    filter: "drop-shadow(0 0 20px rgba(255,215,100,0.45))",
-    textShadow: `
-      0 1px 0 #FFF4C9,
-      0 2px 0 #D4AF37,
-      0 4px 0 #8A5A12,
-      0 8px 18px rgba(0,0,0,0.9),
-      0 0 30px rgba(212,175,55,0.5),
-      0 0 60px rgba(244,215,122,0.3)
-    `,
-  }}
->
-  HÉCATE
+          className="
+            relative
+            text-[7rem]
+            md:text-[8rem]
+            lg:text-[11rem]
+            uppercase
+            tracking-[0.14em]
+            leading-none
+            text-transparent
+            bg-clip-text
+            select-none
+            pl-3
+          "
+          style={{
+            fontFamily: "Norse",
+            backgroundImage: `
+              linear-gradient(
+                180deg,
+                #FFFDF0 0%,
+                #FFF4C9 10%,
+                #FFE79A 22%,
+                #F4D77A 35%,
+                #D4AF37 52%,
+                #E7C45A 62%,
+                #A87416 82%,
+                #7B4F00 100%
+              )
+            `,
+            backgroundSize: "200% auto",
+            animation: "goldShine 4s linear infinite",
+            filter: "drop-shadow(0 0 20px rgba(255,215,100,0.45))",
+            textShadow: `
+          
+            `,
+          }}>
+            HÉCATE
 </h1>
 
           {/* Ornamental Divider */}
@@ -112,47 +107,9 @@ export default function Hero() {
           >
             Onde Histórias
             <br />
-            Nascem Para Assombrar
+            Nascem Para Serem Contadas
           </p>
 
-          {/* CTA */}
-          <Link
-            href="#editais"
-            className="
-              mt-14
-              inline-block
-              rounded-md
-              border-2
-              px-14
-              py-5
-              text-2xl
-              uppercase
-              tracking-[0.18em]
-              text-white
-              transition-all
-              duration-300
-              hover:scale-105
-              active:scale-100
-            "
-            style={{
-              fontFamily: "Norse",
-              borderColor: "#D4AF37",
-              backgroundImage: `
-                linear-gradient(
-                  to bottom,
-                  #B57A19 0%,
-                  #8F5C11 45%,
-                  #5F3906 100%
-                )
-              `,
-              boxShadow: `
-                0 0 35px rgba(212,175,55,0.25),
-                inset 0 1px 0 rgba(255,244,201,0.35)
-              `,
-            }}
-          >
-            Explore os Editais
-          </Link>
         </div>
       </div>
     </section>

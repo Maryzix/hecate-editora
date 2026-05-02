@@ -1,112 +1,64 @@
 "use client";
 
-import { Instagram, MessageCircle } from "lucide-react";
-
-const HECA_WHATS = "5551991090199";
-const DESIGNER_WHATS = "5551991090199";
-const MARY_WHATS = "5551985503101";
+import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#080A0F] border-t border-[#1E222D] text-white">
-      <div className="container mx-auto px-6 lg:px-20 py-14">
+    <footer className="relative overflow-hidden bg-black border-t border-[#2A1A05]">
+      {/* Texture */}
+      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-20" />
 
-        {/* Grid */}
-        <div className="grid md:grid-cols-3 gap-12 text-center md:text-left">
+      {/* Golden Line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
 
-          {/* Hécate */}
-          <div>
-            <h3 className="text-[#C6A343] text-lg font-serif mb-6 tracking-wider">
-              Hécate
-            </h3>
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 md:flex-row md:items-center md:justify-between lg:px-12">
+        {/* Text */}
+        <div className="space-y-2 text-center md:text-left">
+          <p className="text-sm text-[#B9984A]">
+            © {new Date().getFullYear()} Hécate Editora. Todos os direitos reservados.
+          </p>
 
-            <div className="flex justify-center md:justify-start gap-6 text-gray-400">
-              <a
-                href="https://instagram.com/hecatecapista"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram Hécate"
-                className="hover:text-[#C6A343] transition"
-              >
-                <Instagram size={20} />
-              </a>
-
-              <a
-                href={`https://wa.me/${HECA_WHATS}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp Hécate"
-                className="hover:text-[#C6A343] transition"
-              >
-                <MessageCircle size={20} />
-              </a>
-            </div>
-          </div>
-
-          {/* Designer */}
-          <div>
-            <h3 className="text-[#C6A343] text-lg font-serif mb-6 tracking-wider">
-              Designer
-            </h3>
-
-            <div className="flex justify-center md:justify-start gap-6 text-gray-400">
-              <a
-                href="https://instagram.com/carolinaluizdesigner"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram Designer"
-                className="hover:text-[#C6A343] transition"
-              >
-                <Instagram size={20} />
-              </a>
-
-              <a
-                href={`https://wa.me/${DESIGNER_WHATS}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp Designer"
-                className="hover:text-[#C6A343] transition"
-              >
-                <MessageCircle size={20} />
-              </a>
-            </div>
-          </div>
-
-          {/* Desenvolvido por */}
-          <div>
-            <h3 className="text-[#C6A343] text-lg font-serif mb-6 tracking-wider">
-              Desenvolvido por Mary Lindsen
-            </h3>
-
-            <div className="flex justify-center md:justify-start gap-6 text-gray-400">
-              <a
-                href="https://instagram.com/marynotjane_"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram Mary Lindsen"
-                className="hover:text-[#C6A343] transition"
-              >
-                <Instagram size={20} />
-              </a>
-
-              <a
-                href={`https://wa.me/${MARY_WHATS}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="WhatsApp Mary Lindsen"
-                className="hover:text-[#C6A343] transition"
-              >
-                <MessageCircle size={20} />
-              </a>
-            </div>
-          </div>
-
+          <p className="text-sm text-[#8A6A2F]">
+            Desenvolvido por{" "}
+            <a
+              href="https://instagram.com/marynotjane_"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-[#D4AF37] transition-colors duration-300 hover:text-[#FFF4C9]"
+            >
+              Mary Lindsen
+            </a>
+          </p>
         </div>
 
-        {/* Bottom */}
-        <div className="mt-14 pt-8 border-t border-[#1E222D] text-center text-xs text-gray-500 tracking-wider">
-          © {new Date().getFullYear()} Mary Lindsen - Hécate. Todos os direitos reservados.
-        </div>
+        {/* Instagram */}
+        <a
+          href="https://instagram.com/hecatecapista"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Instagram Hécate Editora"
+          className="
+            mx-auto
+            flex
+            h-12
+            w-12
+            items-center
+            justify-center
+            rounded-full
+            border
+            border-[#D4AF37]/50
+            text-[#D4AF37]
+            transition-all
+            duration-300
+            hover:scale-110
+            hover:border-[#D4AF37]
+            hover:bg-[#D4AF37]
+            hover:text-black
+            md:mx-0
+          "
+        >
+          <Instagram size={22} />
+        </a>
       </div>
     </footer>
   );

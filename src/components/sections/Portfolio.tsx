@@ -1,152 +1,191 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useRef } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
-const WHATSAPP_NUMBER = "5551991090199"; 
-
-const covers = [
+const editals = [
   {
-    title: "O Chamado Da Morte",
-    price: "R$ 100,00",
+    title: "Sangue e Cinzas",
+    status: "Em Aberto",
+    period: "01/05/2026 - 30/08/2026",
+    description: "Antologia de terror gótico e horror psicológico.",
     image: "/images/capa1.jpg",
+    link: "/propostaedital",
   },
   {
-    title: "O Que Me Espera Do Lado De Fora?",
-    price: "R$ 100,00",
-    image: "/images/capa2.jpg",
+    title: "Sussurros do Abismo",
+    status: "Em Aberto",
+    period: "15/04/2026 - 15/07/2026",
+    description: "Contos de terror cósmico e sobrenatural.",
+    image: "/images/capa1.jpg",
+    link: "/propostaedital2",
   },
   {
-    title: "Nada Além Do Universo",
-    price: "R$ 100,00",
-    image: "/images/capa3.jpg",
+    title: "Pós-Humano",
+    status: "Finalizado",
+    period: "01/02/2026 - 31/03/2026",
+    description: "Distopia, ficção sombria e futuro degradado.",
+    image: "/images/capa1.jpg",
+    link: "/propostaedital3",
   },
   {
-    title: "A Boneca De Pano",
-    price: "R$ 100,00",
-    image: "/images/capa4.jpg",
+    title: "Ecos do Vazio",
+    status: "Em Aberto",
+    period: "10/06/2026 - 20/09/2026",
+    description: "Narrativas de horror existencial e surrealismo.",
+    image: "/images/capa1.jpg",
+    link: "/propostaedital4",
   },
   {
-    title: "Objetos Cortantes",
-    price: "R$ 100,00",
-    image: "/images/capa5.jpg",
-  },
-  {
-    title: "Hemoglobina",
-    price: "R$ 100,00",
-    image: "/images/capa6.jpg",
-  },
-   {
-    title: "Obsessão Fatal",
-    price: "R$ 100,00",
-    image: "/images/capa7.jpg",
-  },
-   {
-    title: "Fauno - O culto da floresta viva",
-    price: "R$ 100,00",
-    image: "/images/capa8.jpg",
-  },
-    {
-    title: "Herdeiro das chamas",
-    price: "R$ 100,00",
-    image: "/images/capa9.jpg",
-  },
-   {
-    title: "The man in the top hat",
-    price: "R$ 100,00",
-    image: "/images/capa10.jpg",
+    title: "Necrópole",
+    status: "Finalizado",
+    period: "01/01/2026 - 28/02/2026",
+    description: "Mortos, ruínas e segredos enterrados.",
+    image: "/images/capa1.jpg",
+    link: "/propostaedital5",
   },
 ];
 
-export default function Portfolio() {
+export default function Editais() {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
     if (!scrollRef.current) return;
 
-    const scrollAmount = 350;
-
     scrollRef.current.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
+      left: direction === "left" ? -420 : 420,
       behavior: "smooth",
     });
   };
 
-  const handleWhatsApp = (title: string) => {
-    const message = `Oi, quero a capa "${title}"`;
-    const encoded = encodeURIComponent(message);
-
-    window.open(
-      `https://wa.me/${WHATSAPP_NUMBER}?text=${encoded}`,
-      "_blank"
-    );
-  };
-
   return (
-    <section className="bg-[#0B0D12] py-20 md:py-28 text-white relative" id="portfolio">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-20">
+    <section
+      id="editais"
+      aria-labelledby="editais-title"
+      className="relative overflow-hidden bg-black py-24"
+    >
+      {/* Background */}
+      <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-20" />
 
-        {/* Header */}
-        <div className="flex justify-between items-center mb-10 md:mb-20">
-          <div>
-            <span className="text-xs tracking-[0.3em] text-[#C6A343] uppercase">
-              Portfólio
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif text-[#C6A343] mt-3">
-              Capas disponíveis
-            </h2>
-          </div>
+      {/* Decorative Borders */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#D4AF37] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#6E4A11] to-transparent" />
 
-          <div className="hidden sm:flex gap-4">
-            <button
-              onClick={() => scroll("left")}
-              className="w-10 h-10 border border-[#C6A343] flex items-center justify-center hover:bg-[#C6A343] hover:text-black transition"
-            >
-              <ChevronLeft size={18} />
-            </button>
-            <button
-              onClick={() => scroll("right")}
-              className="w-10 h-10 border border-[#C6A343] flex items-center justify-center hover:bg-[#C6A343] hover:text-black transition"
-            >
-              <ChevronRight size={18} />
-            </button>
-          </div>
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+        {/* Navigation */}
+        <div className="hidden lg:block">
+          <button
+            onClick={() => scroll("left")}
+            aria-label="Anterior"
+            className="absolute left-1 top-1/2 z-20 -translate-y-1/2 rounded-full border border-[#D4AF37]/50 bg-black/80 p-4 text-[#D4AF37] transition-all duration-300 hover:scale-110 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-black"
+          >
+            <ChevronLeft size={20} />
+          </button>
+
+          <button
+            onClick={() => scroll("right")}
+            aria-label="Próximo"
+            className="absolute right-1 top-1/2 z-20 -translate-y-1/2 rounded-full border border-[#D4AF37]/50 bg-black/80 p-4 text-[#D4AF37] transition-all duration-300 hover:scale-110 hover:border-[#D4AF37] hover:bg-[#D4AF37] hover:text-black"
+          >
+            <ChevronRight size={20} />
+          </button>
         </div>
 
-      {/* Carrossel */}
-    <div
-    ref={scrollRef}
-    className="flex gap-6 md:gap-8 overflow-x-auto scroll-smooth no-scrollbar pb-4 snap-x snap-mandatory"
-    >
-    {covers.map((cover, index) => (
+        {/* Carousel */}
         <div
-        key={index}
-        className="snap-center min-w-full sm:min-w-[320px] md:min-w-85 bg-[#11141B]  border border-[#1E222D]  p-5 md:p-6  rounded-lg transition-all duration-300 ease-out hover:border-[#C6A343] hover:scale-[0.99] hover:shadow-[0_20px_50px_rgba(0,0,0,0.6)]"
+          ref={scrollRef}
+          className="flex gap-8 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar"
         >
-              <div className="relative">
-                <img
-                  src={cover.image}
-                  alt={cover.title}
-                  className="w-full h-75 sm:h-90 object-cover rounded-md"
-                  draggable={false}
-                />
-                <span className="absolute top-3 right-3 bg-black/70 px-3 py-1 text-xs border border-[#C6A343]">
-                  {cover.price}
-                </span>
-              </div>
-              
-              <p className="mt-4 text-lg font-serif ">{cover.title}</p>
-              <p className="text-[14px] mt-5 sm:text-xs md:text-xs font-serif text-[#f5db94]">*Alteração gratuita do título do livro, fonte e nome do autor/editora.*</p>
-              <p className="text-[14px] mt-2 sm:text-xs md:text-xs font-serif text-[#f5db94]">*Mudanças de cor, elementos ou redesign podem ter custo adicional. Consulte valores.*</p>
-        
-
-              <button
-                onClick={() => handleWhatsApp(cover.title)}
-                className="mt-6 w-full bg-linear-to-r from-[#C6A343] to-[#E6C16A]  text-black py-2 text-2sm tracking-widest uppercase rounded-md hover:opacity-90 active:scale-95 transition font-serif"
+          {editals.map((edital, index) => (
+            <article
+              key={index}
+              className="group min-w-[320px] max-w-95 flex-1 snap-center"
+            >
+              <div
+                className="
+                  relative
+                  overflow-hidden
+                  rounded-2xl
+                  border
+                  border-[#6E4A11]
+                  bg-[#080808]
+                  transition-all
+                  duration-500
+                  hover:border-[#D4AF37]
+                  hover:shadow-[0_0_40px_rgba(212,175,55,0.18)]
+                "
               >
-                Quero essa
-              </button>
-            </div> 
+                {/* Cover */}
+                <div className="relative h-130 overflow-hidden">
+                  <Image
+                    src={edital.image}
+                    alt={edital.title}
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                  />
+
+                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
+                </div>
+
+                {/* Content */}
+                <div className="absolute inset-x-0 bottom-0 p-7">
+                  <span
+                    className={`inline-block rounded-sm border px-3 py-1 text-xs uppercase tracking-[0.15em] ${
+                      edital.status === "Em Aberto"
+                        ? "border-[#D4AF37] bg-[#D4AF37]/10 text-[#F4D77A]"
+                        : "border-gray-500 bg-gray-500/10 text-gray-300"
+                    }`}
+                  >
+                    {edital.status}
+                  </span>
+
+                  <h3
+                    className="mt-5 text-4xl uppercase leading-tight text-transparent bg-clip-text"
+                    style={{
+                      fontFamily: "Norse",
+                      backgroundImage:
+                        "linear-gradient(180deg, #FFF4C9 0%, #D4AF37 60%, #7B4F00 100%)",
+                    }}
+                  >
+                    {edital.title}
+                  </h3>
+
+                  <p className="mt-4 text-sm text-[#C8A75A]">
+                    {edital.period}
+                  </p>
+
+                  <p className="mt-4 text-base leading-relaxed text-[#D7C08A]">
+                    {edital.description}
+                  </p>
+
+                  <Link
+                    href={edital.link}
+                    className="
+                      mt-8
+                      inline-flex
+                      items-center
+                      gap-3
+                      text-lg
+                      uppercase
+                      tracking-[0.12em]
+                      text-[#D4AF37]
+                      transition-all
+                      duration-300
+                      hover:text-[#FFF4C9]
+                    "
+                    style={{ fontFamily: "Norse" }}
+                  >
+                    Leia o edital
+                    <ArrowRight
+                      size={22}
+                      className="transition-transform duration-300 group-hover:translate-x-2"
+                    />
+                  </Link>
+                </div>
+              </div>
+            </article>
           ))}
         </div>
       </div>

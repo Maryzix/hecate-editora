@@ -12,8 +12,7 @@ import {
 const navItems = [
   { label: "Início", href: "/#hero" },
   { label: "Sobre", href: "/#about" },
-  { label: "Editais", href: "/#aboutdesigner" },
-  { label: "Contato", href: "/#ordersection" },
+  { label: "Editais", href: "/#editais" },
 ];
 
 export default function Navbar() {
@@ -45,7 +44,7 @@ export default function Navbar() {
               className="
                 group
                 relative
-                text-sm
+                text-2xl
                 uppercase
                 tracking-[0.18em]
                 text-[#D4AF37]
@@ -159,7 +158,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="
                   text-center
-                  text-xl
+                  text-2xl
                   uppercase
                   tracking-[0.2em]
                   text-[#D4AF37]
