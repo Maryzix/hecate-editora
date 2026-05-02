@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-[url('/images/noise.png')] opacity-20" />
 
       {/* Golden Line */}
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-[#D4AF37] to-transparent" />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col gap-6 px-6 py-8 md:flex-row md:items-center md:justify-between lg:px-12">
         {/* Text */}
