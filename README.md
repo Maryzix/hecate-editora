@@ -1,0 +1,42 @@
+🌙 HÉCATE
+
+A dark, elegant portfolio crafted to showcase book cover design with intensity and identity.
+
+✨ Concept
+
+Hécate is not just a portfolio.
+It’s a digital stage for visual storytelling.
+
+Built to highlight book cover artwork through contrast, minimalism, and dramatic composition — allowing the design to speak louder than the interface.
+
+🛠 Stack
+
+Next.js
+
+React
+
+TypeScript
+
+Tailwind CSS
+
+Clean architecture. Scalable structure. Fully responsive.
+
+🎯 Focus
+
+Strong visual presence
+
+Smooth navigation experience
+
+Minimal UI, maximum impact
+
+Dark immersive aesthetic
+
+🚀 Running Locally
+
+npm install
+npm run dev
+
+👩‍💻 Developer
+
+Mary Luzia
+Front-end developer building modern, intentional web experiences.
