@@ -22,39 +22,49 @@ export default function Hero() {
       <div className="relative z-10 flex min-h-screen items-center justify-center px-6">
         <div className="text-center">
           {/* Main Logo */}
-          <h1
-            className="
-              text-[7rem]
-              md:text-[7rem]
-              lg:text-[10rem]
-              uppercase
-              tracking-[0.14em]
-              leading-none
-              text-transparent
-              bg-clip-text
-              select-none
-            "
-            style={{
-              fontFamily: "Norse",
-              backgroundImage: `
-                linear-gradient(
-                  to bottom,
-                  #FFF4C9 0%,
-                  #F4D77A 18%,
-                  #D4AF37 42%,
-                  #A87416 70%,
-                  #7B4F00 100%
-                )
-              `,
-              textShadow: `
-                0 2px 0 #5A3B00,
-                0 4px 12px rgba(0,0,0,0.85),
-                0 0 35px rgba(212,175,55,0.35)
-              `,
-            }}
-          >
-            HÉCATE
-          </h1>
+        <h1
+  className="
+    relative
+    text-[7rem]
+    md:text-[8rem]
+    lg:text-[11rem]
+    uppercase
+    tracking-[0.14em]
+    leading-none
+    text-transparent
+    bg-clip-text
+    select-none
+  "
+  style={{
+    fontFamily: "Norse",
+    backgroundImage: `
+      linear-gradient(
+        180deg,
+        #FFFDF0 0%,
+        #FFF4C9 10%,
+        #FFE79A 22%,
+        #F4D77A 35%,
+        #D4AF37 52%,
+        #E7C45A 62%,
+        #A87416 82%,
+        #7B4F00 100%
+      )
+    `,
+    backgroundSize: "200% auto",
+    animation: "goldShine 4s linear infinite",
+    filter: "drop-shadow(0 0 20px rgba(255,215,100,0.45))",
+    textShadow: `
+      0 1px 0 #FFF4C9,
+      0 2px 0 #D4AF37,
+      0 4px 0 #8A5A12,
+      0 8px 18px rgba(0,0,0,0.9),
+      0 0 30px rgba(212,175,55,0.5),
+      0 0 60px rgba(244,215,122,0.3)
+    `,
+  }}
+>
+  HÉCATE
+</h1>
 
           {/* Ornamental Divider */}
           <div className="mx-auto mt-6 mb-12 flex items-center justify-center gap-6">
@@ -115,7 +125,7 @@ export default function Hero() {
               border-2
               px-14
               py-5
-              text-lg
+              text-2xl
               uppercase
               tracking-[0.18em]
               text-white
