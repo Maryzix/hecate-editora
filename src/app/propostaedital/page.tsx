@@ -29,10 +29,8 @@ export default function PropostaEdital() {
         <div className="grid items-center gap-14 lg:grid-cols-2">
           {/* Cover */}
           <div className="relative mx-auto w-full max-w-105 lg:max-w-115">
-            {/* Golden Glow */}
             <div className="absolute inset-0 rounded-3xl bg-[#D4AF37]/20 blur-3xl" />
 
-            {/* Book Cover */}
             <div className="relative aspect-3/4 overflow-hidden rounded-2xl border border-[#6E4A11] shadow-[0_0_60px_rgba(212,175,55,0.18)]">
               <Image
                 src="/images/capa1.jpg"
@@ -52,7 +50,7 @@ export default function PropostaEdital() {
             </span>
 
             <h1
-              className="mt-6 text-5xl uppercase leading-tight text-transparent bg-clip-text md:text-7xl"
+              className="mt-6 bg-clip-text text-5xl uppercase leading-tight text-transparent md:text-7xl"
               style={{
                 fontFamily: "Norse",
                 backgroundImage:
@@ -67,7 +65,7 @@ export default function PropostaEdital() {
               sombrias que exploram os limites entre a realidade e o pesadelo.
             </p>
 
-            {/* Dates */}
+            {/* Datas */}
             <div className="mt-10 grid gap-6 sm:grid-cols-2">
               <div className="rounded-2xl border border-[#6E4A11] bg-[#080808] p-6">
                 <div className="mb-3 flex items-center gap-3 text-[#D4AF37]">
@@ -78,7 +76,7 @@ export default function PropostaEdital() {
                 </div>
 
                 <p className="text-3xl font-semibold text-white">
-                  01/05/2026
+                  01/08/2026
                 </p>
               </div>
 
@@ -96,37 +94,70 @@ export default function PropostaEdital() {
               </div>
             </div>
 
-            {/* CTA */}
-            <Link
-              href="#formulario"
-              className="
-                mt-12
-                inline-flex
-                items-center
-                justify-center
-                rounded-xl
-                border
-                border-[#D4AF37]
-                bg-linear-to-r
-                from-[#7B4F00]
-                via-[#D4AF37]
-                to-[#A87416]
-                px-10
-                py-5
-                text-lg
-                font-semibold
-                uppercase
-                tracking-[0.15em]
-                text-black
-                shadow-[0_0_35px_rgba(212,175,55,0.25)]
-                transition-all
-                duration-300
-                hover:scale-105
-                hover:shadow-[0_0_55px_rgba(212,175,55,0.45)]
-              "
-            >
-              Quero Participar
-            </Link>
+            {/* Botões */}
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+              {/* Quero Participar */}
+              <Link
+                href="https://wa.me/5551999999999?text=Olá!%20Tenho%20interesse%20em%20participar%20do%20edital%20Sangue%20e%20Cinzas."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-[#D4AF37]
+                  bg-gradient-to-r
+                  from-[#7B4F00]
+                  via-[#D4AF37]
+                  to-[#A87416]
+                  px-10
+                  py-5
+                  text-lg
+                  font-semibold
+                  uppercase
+                  tracking-[0.15em]
+                  text-black
+                  shadow-[0_0_35px_rgba(212,175,55,0.25)]
+                  transition-all
+                  duration-300
+                  hover:scale-105
+                  hover:shadow-[0_0_55px_rgba(212,175,55,0.45)]
+                "
+              >
+                Quero Participar
+              </Link>
+
+              {/* Ver Edital */}
+              <Link
+                href="/pdfs/edital_corvo_hecate.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="
+                  inline-flex
+                  items-center
+                  justify-center
+                  rounded-xl
+                  border
+                  border-[#D4AF37]
+                  px-10
+                  py-5
+                  text-lg
+                  font-semibold
+                  uppercase
+                  tracking-[0.15em]
+                  text-[#D4AF37]
+                  transition-all
+                  duration-300
+                  hover:bg-[#D4AF37]
+                  hover:text-black
+                  hover:scale-105
+                "
+              >
+                Ver Edital
+              </Link>
+            </div>
           </div>
         </div>
       </section>

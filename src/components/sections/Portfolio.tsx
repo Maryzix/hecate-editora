@@ -9,43 +9,12 @@ const editals = [
   {
     title: "Sangue e Cinzas",
     status: "Em Aberto",
-    period: "01/05/2026 - 30/08/2026",
+    period: "01/08/2026 - 30/08/2026",
     description: "Antologia de terror gótico e horror psicológico.",
     image: "/images/capa1.jpg",
     link: "/propostaedital",
-  },
-  {
-    title: "Sussurros do Abismo",
-    status: "Em Aberto",
-    period: "15/04/2026 - 15/07/2026",
-    description: "Contos de terror cósmico e sobrenatural.",
-    image: "/images/capa1.jpg",
-    link: "/propostaedital2",
-  },
-  {
-    title: "Pós-Humano",
-    status: "Finalizado",
-    period: "01/02/2026 - 31/03/2026",
-    description: "Distopia, ficção sombria e futuro degradado.",
-    image: "/images/capa1.jpg",
-    link: "/propostaedital3",
-  },
-  {
-    title: "Ecos do Vazio",
-    status: "Em Aberto",
-    period: "10/06/2026 - 20/09/2026",
-    description: "Narrativas de horror existencial e surrealismo.",
-    image: "/images/capa1.jpg",
-    link: "/propostaedital4",
-  },
-  {
-    title: "Necrópole",
-    status: "Finalizado",
-    period: "01/01/2026 - 28/02/2026",
-    description: "Mortos, ruínas e segredos enterrados.",
-    image: "/images/capa1.jpg",
-    link: "/propostaedital5",
-  },
+  }
+  
 ];
 
 export default function Editais() {
