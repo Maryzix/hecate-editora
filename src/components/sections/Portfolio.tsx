@@ -7,13 +7,50 @@ import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
 
 const editals = [
   {
-    title: "Sangue e Cinzas",
+    title: "Bestiário das Criaturas Demoníacas",
     status: "Em Aberto",
-    period: "01/08/2026 - 30/08/2026",
-    description: "Antologia de terror gótico e horror psicológico.",
-    image: "/images/capa1.jpg",
-    link: "/propostaedital",
-  }
+    period: "23/10/2026 - 22/12/2026",
+    description:
+      "Antologia de Terror, Horror, Suspense e Ficção Histórica Sombria.",
+    image: "/images/Capa-Bestiario-das-criaturas-demoniacas.jpeg",
+    link: "/propostaedital-bestiario-das-criaturas-demoniacas",
+  },
+   {
+   title: "Em Breve",
+    status: "Em Breve",
+    period: "Aguardando anúncio",
+    description:
+      "Em Breve",
+    image: "/images/em-breve.jpg",
+    link: "/propostaedital-em-breve",
+  },
+   {
+   title: "Em Breve",
+    status: "Em Breve",
+    period: "Aguardando anúncio",
+    description:
+      "Em Breve",
+    image: "/images/em-breve.jpg",
+    link: "/propostaedital-em-breve",
+  },
+   {
+   title: "Em Breve",
+    status: "Em Breve",
+    period: "Aguardando anúncio",
+    description:
+      "Em Breve",
+    image: "/images/em-breve.jpg",
+    link: "/propostaedital-em-breve",
+  },
+   {
+   title: "Em Breve",
+    status: "Em Breve",
+    period: "Aguardando anúncio",
+    description:
+      "Em Breve",
+    image: "/images/em-breve.jpg",
+    link: "/propostaedital-em-breve",
+  },
   
 ];
 
@@ -86,20 +123,26 @@ export default function Editais() {
                   hover:shadow-[0_0_40px_rgba(212,175,55,0.18)]
                 "
               >
-                {/* Cover */}
+                {/* Cover with Blur */}
                 <div className="relative h-130 overflow-hidden">
                   <Image
                     src={edital.image}
                     alt={edital.title}
                     fill
-                    className="object-cover transition duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 90vw, 380px"
+                    className="scale-105 object-cover transition-all duration-700 group-hover:scale-110"
                   />
 
-                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/40 to-transparent" />
+                  {/* Soft dark overlay */}
+                  <div className="absolute inset-0 bg-black/25" />
+
+                  {/* Dark gradient for text readability */}
+                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/70 via-55% to-black/10" />
                 </div>
 
                 {/* Content */}
                 <div className="absolute inset-x-0 bottom-0 p-7">
+                  {/* Status */}
                   <span
                     className={`inline-block rounded-sm border px-3 py-1 text-xs uppercase tracking-[0.15em] ${
                       edital.status === "Em Aberto"
@@ -110,8 +153,9 @@ export default function Editais() {
                     {edital.status}
                   </span>
 
+                  {/* Title */}
                   <h3
-                    className="mt-5 text-4xl uppercase leading-tight text-transparent bg-clip-text"
+                    className="mt-5 text-3xl uppercase leading-tight text-transparent bg-clip-text drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
                     style={{
                       fontFamily: "Norse",
                       backgroundImage:
@@ -121,14 +165,17 @@ export default function Editais() {
                     {edital.title}
                   </h3>
 
+                  {/* Period */}
                   <p className="mt-4 text-sm text-[#C8A75A]">
                     {edital.period}
                   </p>
 
+                  {/* Description */}
                   <p className="mt-4 text-base leading-relaxed text-[#D7C08A]">
                     {edital.description}
                   </p>
 
+                  {/* Link */}
                   <Link
                     href={edital.link}
                     className="
@@ -155,7 +202,9 @@ export default function Editais() {
                 </div>
               </div>
             </article>
+            
           ))}
+          
         </div>
       </div>
     </section>
